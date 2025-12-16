@@ -1,5 +1,6 @@
 using Reminder.Infrastructure;
 using Reminder.Application;
+using Reminder.Api;
 using Scalar.AspNetCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -8,6 +9,10 @@ var builder = WebApplication.CreateBuilder(args);
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
 {
+    builder
+        .Services
+        .AddPresentation();
+
     builder
         .Services
         .AddApplication();
@@ -28,6 +33,10 @@ if (app.Environment.IsDevelopment())
     app.MapScalarApiReference("/docs");
 }
 
+app.UseExceptionHandler();
+app.UseStatusCodePages();
+
 app.UseHttpsRedirection();
+
 
 app.Run();
