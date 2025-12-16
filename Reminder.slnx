@@ -1,0 +1,13 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/Reminder.Api/Reminder.Api.csproj" />
+    <Project Path="src/Reminder.Application/Reminder.Application.csproj" />
+    <Project Path="src/Reminder.Domain/Reminder.Domain.csproj" />
+    <Project Path="src/Reminder.Infrastructure/Reminder.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/Reminder.Api.Tests/Reminder.Api.Tests.csproj" />
+    <Project Path="tests/Reminder.Application.Tests/Reminder.Application.Tests.csproj" />
+    <Project Path="tests/Reminder.Infrastructure.Tests/Reminder.Infrastructure.Tests.csproj" />
+  </Folder>
+</Solution>
