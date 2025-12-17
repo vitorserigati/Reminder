@@ -11,7 +11,7 @@ builder.Services.AddOpenApi();
 {
     builder
         .Services
-        .AddPresentation();
+        .AddPresentation(builder.Configuration);
 
     builder
         .Services
@@ -23,7 +23,6 @@ builder.Services.AddOpenApi();
 
 }
 
-
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -32,6 +31,9 @@ if (app.Environment.IsDevelopment())
     app.MapOpenApi();
     app.MapScalarApiReference("/docs");
 }
+
+// app.UseAuthentication();
+// app.UseAuthorization();
 
 app.UseExceptionHandler();
 app.UseStatusCodePages();

@@ -6,13 +6,4 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="ValueOf" />
-  </ItemGroup>
-
-  
-  <ItemGroup>
-    <ProjectReference Include="..\Reminder.SharedKernel\Reminder.SharedKernel.csproj" />
-  </ItemGroup>
-
 </Project>

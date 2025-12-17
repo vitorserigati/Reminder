@@ -2,7 +2,6 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Configuration;
 using Microsoft.EntityFrameworkCore;
 using Reminder.Infrastructure.Persistence;
-using Reminder.Application.Interfaces;
 
 namespace Reminder.Infrastructure;
 
@@ -16,7 +15,6 @@ public static class DependencyInjection
             options.UseNpgsql(connectionString);
         });
 
-        services.AddScoped<IMediator, Mediator>();
         return services;
     }
 }

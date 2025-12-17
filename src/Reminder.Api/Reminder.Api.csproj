@@ -7,6 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" />
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" />
     <PackageReference Include="Scalar.AspNetCore" />
   </ItemGroup>
@@ -14,6 +16,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Reminder.Application\Reminder.Application.csproj" />
     <ProjectReference Include="..\Reminder.Infrastructure\Reminder.Infrastructure.csproj" />
+    <ProjectReference Include="..\Reminder.SharedKernel\Reminder.SharedKernel.csproj" />
   </ItemGroup>
 
 </Project>
